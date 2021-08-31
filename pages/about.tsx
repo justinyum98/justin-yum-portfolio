@@ -3,20 +3,20 @@ import Head from 'next/head';
 
 import HeaderNavbar from '../components/HeaderNavbar';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
-    <div id="home-page" className="container mx-auto">
+    <div id="about-page" className="container mx-auto">
       <Head>
-        <title>Justin Yum</title>
+        <title>About | Justin Yum</title>
         <meta name="description" content="Justin Yum's website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderNavbar />
-      <div id="home-page-content" className="bg-gray-300">
-        Hello
+      <div id="about-page-content" className="bg-gray-300">
+        About page content here
       </div>
     </div>
   );
 };
 
-export default Home;
+export default About;
