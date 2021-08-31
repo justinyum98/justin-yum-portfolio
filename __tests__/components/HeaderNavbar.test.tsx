@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { GoMarkGithub } from 'react-icons/go';
 import HeaderNavbar from '../../components/HeaderNavbar';
 
 describe('HeaderNavbar', () => {
