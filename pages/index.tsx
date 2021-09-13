@@ -1,20 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { createAvatar } from '@dicebear/avatars';
-import * as style from '@dicebear/croodles-neutral';
 
 import HeaderNavbar from '../components/HeaderNavbar';
 
 const Home: NextPage = () => {
-  const svg = createAvatar(style, {
-    seed: 'justin-yum',
-    eyes: 'variant16',
-    nose: 'variant09',
-    mouth: 'variant18',
-  });
-
-  console.log(svg);
-
   return (
     <div id="home-page" className="bg-fwTan">
       <Head>
