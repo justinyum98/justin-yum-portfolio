@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { GoMarkGithub } from 'react-icons/go';
 import { BiMenuAltRight } from 'react-icons/bi';
@@ -66,7 +65,7 @@ const HeaderNavbar = () => {
       >
         <Link href="/">
           <a className="pt-2 px-2 rounded-full hover:bg-white">
-            <Image src="/logo.svg" alt="(Logo)" width={48} height={48} />
+            <img src="/logo.svg" alt="(Logo)" width={48} height={48} />
           </a>
         </Link>
         <button
