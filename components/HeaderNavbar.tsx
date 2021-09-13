@@ -6,7 +6,7 @@ import { GoMarkGithub } from 'react-icons/go';
 import { BiMenuAltRight } from 'react-icons/bi';
 
 const HeaderNavbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  // const [isOpen, setIsOpen] = React.useState(false);
 
   const navLinks = [
     {
@@ -66,18 +66,13 @@ const HeaderNavbar = () => {
       >
         <Link href="/">
           <a className="pt-2 px-2 rounded-full hover:bg-white">
-            <Image
-              src="/logo.svg"
-              alt="(Logo)"
-              width={48}
-              height={48}
-            />
+            <Image src="/logo.svg" alt="(Logo)" width={48} height={48} />
           </a>
         </Link>
         <button
           id="header-navbar-open-sidebar-button"
           className="p-2 lg:hidden"
-          onClick={() => setIsOpen(true)}
+          // onClick={() => setIsOpen(true)}
         >
           <BiMenuAltRight size={48} />
         </button>
