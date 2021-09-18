@@ -1,33 +1,15 @@
 import * as React from 'react';
-import Link from 'next/link';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Icon from '@material-ui/core/Icon';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Slide from '@material-ui/core/Slide';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { GoMarkGithub } from 'react-icons/go';
-import { BiMenuAltRight } from 'react-icons/bi';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    appbar: {
-      backgroundColor: theme.palette.background.paper,
-    },
-  })
-);
+import Link from './Link';
+import LogoIcon from '../icons/LogoIcon';
 
-type HeaderNavbarProps = {
-  onMenuClick: () => void;
-  isMenuOpen: boolean;
-};
-
-const HeaderNavbar = ({ onMenuClick, isMenuOpen }: HeaderNavbarProps) => {
-  const styles = useStyles();
-  const trigger = useScrollTrigger();
-
+const HeaderNavbar = () => {
   const navLinks = [
     {
       key: '0',
@@ -63,33 +45,90 @@ const HeaderNavbar = ({ onMenuClick, isMenuOpen }: HeaderNavbarProps) => {
     {
       key: '0',
       id: 'header-navbar-socials-linkedin',
-      icon: <AiFillLinkedin size={28} />,
+      icon: <LinkedInIcon />,
       link: 'https://www.linkedin.com/in/justinyum98',
       ariaLabel: 'Linkedin social link',
     },
     {
       key: '1',
       id: 'header-navbar-socials-github',
-      icon: <GoMarkGithub size={28} />,
+      icon: <GitHubIcon />,
       link: 'https://github.com/justinyum98',
       ariaLabel: 'Github social link',
     },
   ];
 
   return (
-    <>
-      <Slide appear={false} direction="down" in={!trigger}>
-        <AppBar className={styles.appbar} elevation={0}>
-          <Toolbar>
-            <IconButton edge="start">
-              <Icon>
-                <img src="/logo.svg" alt="(Logo)" />
-              </Icon>
+    <AppBar
+      position="sticky"
+      color="inherit"
+      elevation={0}
+      sx={{
+        paddingY: 1,
+        paddingX: {
+          lg: 3,
+        },
+      }}
+      aria-label="Header navigation bar"
+    >
+      <Toolbar
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        <IconButton sx={{ mr: 5 }} color="primary" size="large">
+          <LogoIcon />
+        </IconButton>
+        <Box
+          sx={{
+            display: {
+              xs: 'none',
+              lg: 'flex',
+            },
+            flexGrow: 1,
+            flexDirection: 'row',
+            gap: '4rem',
+          }}
+        >
+          {navLinks.map(({ key, id, name, route, ariaLabel }) => (
+            <Link
+              key={key}
+              id={id}
+              href={route}
+              color="primary"
+              fontWeight="medium"
+              underline="hover"
+            >
+              {name}
+            </Link>
+          ))}
+        </Box>
+        <Box
+          sx={{
+            display: {
+              xs: 'none',
+              lg: 'flex',
+            },
+            flexDirection: 'row-reverse',
+            gap: '2rem',
+          }}
+        >
+          {socialLinks.map(({ key, id, icon, link, ariaLabel }) => (
+            <IconButton
+              key={key}
+              id={id}
+              href={link}
+              color="primary"
+              size="large"
+            >
+              {icon}
             </IconButton>
-          </Toolbar>
-        </AppBar>
-      </Slide>
-    </>
+          ))}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 
   // return (
