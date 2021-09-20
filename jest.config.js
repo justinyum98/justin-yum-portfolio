@@ -1,5 +1,14 @@
 module.exports = {
-  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/cypress/**',
+    '!**/pages/_*.{ts,tsx}',
+    '!**/pages/api/*.ts',
+    '!**/src/createEmotionCache.ts',
+    '!**/src/theme.ts',
+  ],
   moduleNameMapper: {
     /* Handle CSS imports (with CSS modules)
     https://jestjs.io/docs/webpack#mocking-css-modules */

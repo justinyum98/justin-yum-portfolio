@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "testLocal": "jest --watch --coverage",
+    "test": "jest --watchAll --coverage",
     "testProd": "jest --ci",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
