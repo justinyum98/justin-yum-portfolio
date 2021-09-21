@@ -9,9 +9,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
+import DialogTitle from '@mui/material/DialogTitle';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import Link from './Link';
 import LogoIcon from '../icons/LogoIcon';
@@ -70,6 +72,7 @@ const HeaderNavbar = () => {
   return (
     <>
       <AppBar
+        data-testid="header-navbar"
         position="sticky"
         color="inherit"
         elevation={0}
@@ -79,6 +82,7 @@ const HeaderNavbar = () => {
             lg: 3,
           },
         }}
+        role="banner"
         aria-label="Header navigation bar"
       >
         <Toolbar
@@ -101,6 +105,7 @@ const HeaderNavbar = () => {
             color="primary"
             size="large"
             onClick={() => setIsOpen(true)}
+            aria-label="Open sidebar menu"
           >
             <MenuIcon />
           </IconButton>
@@ -169,10 +174,21 @@ const HeaderNavbar = () => {
       >
         <Box
           role="presentation"
-          sx={{ px: 8, pt: '50%' }}
+          aria-label="Sidebar menu"
           onClick={() => setIsOpen(false)}
         >
-          <List>
+          <DialogTitle
+            sx={{ display: 'flex', justifyContent: 'flex-end', pb: '20%' }}
+          >
+            <IconButton
+              aria-label="Close sidebar menu"
+              color="primary"
+              onClick={() => setIsOpen(false)}
+            >
+              <CloseIcon />
+            </IconButton>
+          </DialogTitle>
+          <List sx={{ px: 8 }}>
             {navLinks.map(({ key, id, name, route, ariaLabel }) => (
               <Link
                 key={key}
