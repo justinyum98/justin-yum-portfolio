@@ -13,6 +13,13 @@ jest.mock('next/router', () => ({
   },
 }));
 
+jest.mock('next/link', () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return ({ children }: any) => {
+    return children;
+  };
+});
+
 describe('HeaderNavbar component', () => {
   it('renders the header navbar', () => {
     // Arrange
@@ -77,6 +84,26 @@ describe('HeaderNavbar component', () => {
 
     // Act
     fireEvent.click(sidebarMenu);
+
+    // Assert
+    expect(
+      screen.queryByRole('presentation', { name: 'Sidebar menu' })
+    ).toBeNull();
+  });
+
+  it('closes the sidebar menu when a navigation link is clicked', () => {
+    // Arrange
+    render(<HeaderNavbar />);
+    const openMenuButton = screen.getByRole('button', {
+      name: 'Open sidebar menu',
+    });
+    fireEvent.click(openMenuButton);
+    const aboutSectionLink = screen.getByRole('button', {
+      name: 'About',
+    });
+
+    // Act
+    fireEvent.click(aboutSectionLink);
 
     // Assert
     expect(

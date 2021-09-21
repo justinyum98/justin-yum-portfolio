@@ -25,6 +25,7 @@ const HeaderNavbar = () => {
     {
       key: '0',
       id: 'header-navbar-navlinks-about',
+      mobileId: 'mobile-sidebar-menu-navlinks-about',
       name: 'About',
       route: '/#about',
       ariaLabel: 'About page link',
@@ -32,6 +33,7 @@ const HeaderNavbar = () => {
     {
       key: '1',
       id: 'header-navbar-navlinks-work',
+      mobileId: 'mobile-sidebar-menu-navlinks-work',
       name: 'Work',
       route: '/#work',
       ariaLabel: 'Work page link',
@@ -39,6 +41,7 @@ const HeaderNavbar = () => {
     {
       key: '2',
       id: 'header-navbar-navlinks-projects',
+      mobileId: 'mobile-sidebar-menu-navlinks-projects',
       name: 'Projects',
       route: '/#projects',
       ariaLabel: 'Projects page link',
@@ -46,6 +49,7 @@ const HeaderNavbar = () => {
     {
       key: '3',
       id: 'header-navbar-navlinks-contact',
+      mobileId: 'mobile-sidebar-menu-navlinks-contact',
       name: 'Contact',
       route: '/#contact',
       ariaLabel: 'Contact page link',
@@ -56,6 +60,7 @@ const HeaderNavbar = () => {
     {
       key: '0',
       id: 'header-navbar-socials-linkedin',
+      mobileId: 'mobile-sidebar-menu-socials-linkedin',
       icon: <LinkedInIcon />,
       link: 'https://www.linkedin.com/in/justinyum98',
       ariaLabel: 'LinkedIn social link',
@@ -63,6 +68,7 @@ const HeaderNavbar = () => {
     {
       key: '1',
       id: 'header-navbar-socials-github',
+      mobileId: 'mobile-sidebar-menu-socials-github',
       icon: <GitHubIcon />,
       link: 'https://github.com/justinyum98',
       ariaLabel: 'Github social link',
@@ -72,7 +78,7 @@ const HeaderNavbar = () => {
   return (
     <>
       <AppBar
-        data-testid="header-navbar"
+        id="header-navbar"
         position="sticky"
         color="inherit"
         elevation={0}
@@ -181,6 +187,7 @@ const HeaderNavbar = () => {
             sx={{ display: 'flex', justifyContent: 'flex-end', pb: '20%' }}
           >
             <IconButton
+              id="mobile-sidebar-menu-close-button"
               aria-label="Close sidebar menu"
               color="primary"
               onClick={() => setIsOpen(false)}
@@ -189,10 +196,10 @@ const HeaderNavbar = () => {
             </IconButton>
           </DialogTitle>
           <List sx={{ px: 8 }}>
-            {navLinks.map(({ key, id, name, route, ariaLabel }) => (
+            {navLinks.map(({ key, mobileId, name, route, ariaLabel }) => (
               <Link
                 key={key}
-                id={id}
+                id={mobileId}
                 href={route}
                 aria-label={ariaLabel}
                 underline="none"
@@ -203,8 +210,8 @@ const HeaderNavbar = () => {
               </Link>
             ))}
             <Divider sx={{ my: 4 }} />
-            {socialLinks.map(({ key, id, icon, link, ariaLabel }) => (
-              <Link key={key} id={id} href={link} aria-label={ariaLabel}>
+            {socialLinks.map(({ key, mobileId, icon, link, ariaLabel }) => (
+              <Link key={key} id={mobileId} href={link} aria-label={ariaLabel}>
                 <ListItemButton sx={{ pl: 9, py: 2 }}>
                   <ListItemIcon sx={{ color: 'primary.main' }}>
                     {icon}
