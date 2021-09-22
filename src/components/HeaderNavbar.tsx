@@ -10,6 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import DialogTitle from '@mui/material/DialogTitle';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Slide from '@mui/material/Slide';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -20,6 +22,8 @@ import LogoIcon from '../icons/LogoIcon';
 
 const HeaderNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const trigger = useScrollTrigger();
 
   const navLinks = [
     {
@@ -77,95 +81,97 @@ const HeaderNavbar = () => {
 
   return (
     <>
-      <AppBar
-        id="header-navbar"
-        position="sticky"
-        color="inherit"
-        elevation={0}
-        sx={{
-          paddingY: 1,
-          paddingX: {
-            lg: 3,
-          },
-        }}
-        role="banner"
-        aria-label="Header navigation bar"
-      >
-        <Toolbar
+      <Slide appear={false} direction="down" in={!trigger}>
+        <AppBar
+          id="header-navbar"
+          position="sticky"
+          color="inherit"
+          elevation={0}
           sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
+            paddingY: 1,
+            paddingX: {
+              lg: 3,
+            },
           }}
+          role="banner"
+          aria-label="Header navigation bar"
         >
-          <IconButton color="primary" size="large">
-            <LogoIcon />
-          </IconButton>
-          <IconButton
-            id="header-navbar-open-sidebar-button"
+          <Toolbar
             sx={{
-              display: {
-                lg: 'none',
-              },
-            }}
-            color="primary"
-            size="large"
-            onClick={() => setIsOpen(true)}
-            aria-label="Open sidebar menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            sx={{
-              display: {
-                xs: 'none',
-                lg: 'flex',
-              },
-              ml: 5,
-              flexGrow: 1,
+              display: 'flex',
               flexDirection: 'row',
-              gap: '4rem',
+              justifyContent: 'space-between',
             }}
           >
-            {navLinks.map(({ key, id, name, route, ariaLabel }) => (
-              <Link
-                key={key}
-                id={id}
-                href={route}
-                color="primary"
-                fontWeight="medium"
-                underline="hover"
-                aria-label={ariaLabel}
-              >
-                {name}
-              </Link>
-            ))}
-          </Box>
-          <Box
-            sx={{
-              display: {
-                xs: 'none',
-                lg: 'flex',
-              },
-              flexDirection: 'row-reverse',
-              gap: '2rem',
-            }}
-          >
-            {socialLinks.map(({ key, id, icon, link, ariaLabel }) => (
-              <IconButton
-                key={key}
-                id={id}
-                href={link}
-                color="primary"
-                size="large"
-                aria-label={ariaLabel}
-              >
-                {icon}
-              </IconButton>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+            <IconButton color="primary" size="large">
+              <LogoIcon />
+            </IconButton>
+            <IconButton
+              id="header-navbar-open-sidebar-button"
+              sx={{
+                display: {
+                  lg: 'none',
+                },
+              }}
+              color="primary"
+              size="large"
+              onClick={() => setIsOpen(true)}
+              aria-label="Open sidebar menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box
+              sx={{
+                display: {
+                  xs: 'none',
+                  lg: 'flex',
+                },
+                ml: 5,
+                flexGrow: 1,
+                flexDirection: 'row',
+                gap: '4rem',
+              }}
+            >
+              {navLinks.map(({ key, id, name, route, ariaLabel }) => (
+                <Link
+                  key={key}
+                  id={id}
+                  href={route}
+                  color="primary"
+                  fontWeight="medium"
+                  underline="hover"
+                  aria-label={ariaLabel}
+                >
+                  {name}
+                </Link>
+              ))}
+            </Box>
+            <Box
+              sx={{
+                display: {
+                  xs: 'none',
+                  lg: 'flex',
+                },
+                flexDirection: 'row-reverse',
+                gap: '2rem',
+              }}
+            >
+              {socialLinks.map(({ key, id, icon, link, ariaLabel }) => (
+                <IconButton
+                  key={key}
+                  id={id}
+                  href={link}
+                  color="primary"
+                  size="large"
+                  aria-label={ariaLabel}
+                >
+                  {icon}
+                </IconButton>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Slide>
       <Drawer
         id="mobile-sidebar-menu"
         sx={{

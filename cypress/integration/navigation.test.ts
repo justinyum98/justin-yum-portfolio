@@ -64,6 +64,16 @@ describe('Navigation', () => {
     // Assert
     cy.url().should('eq', 'https://www.linkedin.com/in/justinyum98');
   });
+
+  it('should hide header navbar when scrolling down', () => {
+    // Arrange
+
+    // Act
+    cy.scrollTo('bottom');
+
+    // Assert
+    cy.get('header#header-navbar').should('be.hidden');
+  });
 });
 
 export {};
