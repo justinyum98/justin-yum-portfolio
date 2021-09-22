@@ -8,10 +8,10 @@ const IntroSection = () => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        py: {
-          xs: 6,
-          md: 10,
-          lg: 20,
+        my: {
+          xs: 12,
+          md: 20,
+          lg: 24,
         },
       }}
     >

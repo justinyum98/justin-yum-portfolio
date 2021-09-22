@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 
 import HeaderNavbar from '../src/components/HeaderNavbar';
 import IntroSection from '../src/components/IntroSection';
+import AboutSection from '../src/components/AboutSection';
 
 const Index = () => {
   return (
@@ -22,6 +23,14 @@ const Index = () => {
         }}
       >
         <IntroSection />
+        <Box
+          sx={{
+            my: {
+              xs: 40,
+            },
+          }}
+        />
+        <AboutSection />
       </Container>
     </Box>
   );
