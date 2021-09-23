@@ -5,13 +5,14 @@ import Typography from '@mui/material/Typography';
 const IntroSection = () => {
   return (
     <Box
+      id="home"
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        my: {
-          xs: 12,
+        py: {
+          xs: 16,
           md: 20,
-          lg: 24,
+          xl: 24,
         },
       }}
     >

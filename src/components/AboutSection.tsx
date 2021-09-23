@@ -9,16 +9,16 @@ import Link from './Link';
 const AboutSection = () => {
   return (
     <Box
+      id="about"
       sx={{
-        my: {
-          xs: 12,
+        py: {
+          xs: 16,
           md: 20,
-          lg: 24,
+          xl: 30,
         },
       }}
     >
       <Typography
-        id="about"
         variant="h5"
         component="div"
         color="textSecondary"

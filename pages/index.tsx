@@ -23,13 +23,6 @@ const Index = () => {
         }}
       >
         <IntroSection />
-        <Box
-          sx={{
-            my: {
-              xs: 40,
-            },
-          }}
-        />
         <AboutSection />
       </Container>
     </Box>
