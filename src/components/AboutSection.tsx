@@ -18,6 +18,7 @@ const AboutSection = () => {
       }}
     >
       <Typography
+        id="about"
         variant="h5"
         component="div"
         color="textSecondary"
