@@ -14,7 +14,8 @@ const AboutSection = () => {
         py: {
           xs: 16,
           md: 20,
-          xl: 30,
+          xl: 24,
+          xxl: 36,
         },
       }}
     >

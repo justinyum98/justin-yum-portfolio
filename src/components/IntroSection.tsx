@@ -13,6 +13,7 @@ const IntroSection = () => {
           xs: 16,
           md: 20,
           xl: 24,
+          xxl: 36,
         },
       }}
     >
