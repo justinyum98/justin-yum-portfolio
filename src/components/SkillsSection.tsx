@@ -33,7 +33,7 @@ const SkillsSection = ({ isItem }: SkillsSectionProps) => {
                 alignItems: 'center',
               }}
             >
-              <ChevronRightIcon fontSize="small" sx={{ mr: 1 }} />
+              <ChevronRightIcon fontSize="small" color="primary" sx={{ mr: 1 }} />
               <Typography variant="subtitle1" fontFamily="monospace">
                 {skillName}
               </Typography>
