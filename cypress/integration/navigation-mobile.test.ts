@@ -26,6 +26,18 @@ describe('Navigation mobile', () => {
     cy.get('div#mobile-sidebar-menu').should('not.exist');
   });
 
+  it('should navigate to the Work section and close the sidebar menu when clicking the Work link', () => {
+    // Arrange
+    cy.get('button#header-navbar-open-sidebar-button').click();
+
+    // Act
+    cy.get('a#mobile-sidebar-menu-navlinks-work').click();
+
+    // Assert
+    cy.url().should('include', '/#work');
+    cy.get('div#mobile-sidebar-menu').should('not.exist');
+  });
+
   it('should close the sidebar menu when clicking the close sidebar menu button', () => {
     // Arrange
     cy.get('button#header-navbar-open-sidebar-button').click();
