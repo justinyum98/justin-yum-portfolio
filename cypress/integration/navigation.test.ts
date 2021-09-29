@@ -1,15 +1,25 @@
 describe('Navigation', () => {
   beforeEach(() => {
     // Set viewport to 'lg'
-    cy.viewport(1024, 1000);
+    cy.viewport(1024, 800);
     cy.visit('http://localhost:3000');
+  });
+
+  it('should navigate to the intro section on the home page when clicking the logo', () => {
+    // Arrange
+
+    // Act
+    cy.get('a#header-navbar-navlinks-home').click();
+
+    // Assert
+    cy.url().should('include', '/#home');
   });
 
   it('should navigate to about section on the home page when clicking "About" link', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-navlinks-about"]').click();
+    cy.get('a#header-navbar-navlinks-about').click();
 
     // Assert
     cy.url().should('include', '/#about');
@@ -19,7 +29,7 @@ describe('Navigation', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-navlinks-work"]').click();
+    cy.get('a#header-navbar-navlinks-work').click();
 
     // Assert
     cy.url().should('include', '/#work');
@@ -29,7 +39,7 @@ describe('Navigation', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-navlinks-projects"]').click();
+    cy.get('a#header-navbar-navlinks-projects').click();
 
     // Assert
     cy.url().should('include', '/#projects');
@@ -39,7 +49,7 @@ describe('Navigation', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-navlinks-contact"]').click();
+    cy.get('a#header-navbar-navlinks-contact').click();
 
     // Assert
     cy.url().should('include', '/#contact');
@@ -49,7 +59,7 @@ describe('Navigation', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-socials-github"]').click();
+    cy.get('a#header-navbar-socials-github').click();
 
     // Assert
     cy.url().should('eq', 'https://github.com/justinyum98');
@@ -59,7 +69,7 @@ describe('Navigation', () => {
     // Arrange
 
     // Act
-    cy.get('a[id="header-navbar-socials-linkedin"]').click();
+    cy.get('a#header-navbar-socials-linkedin').click();
 
     // Assert
     cy.url().should('eq', 'https://www.linkedin.com/in/justinyum98');

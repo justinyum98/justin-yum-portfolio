@@ -103,7 +103,12 @@ const HeaderNavbar = () => {
               justifyContent: 'space-between',
             }}
           >
-            <IconButton href="/#home" color="primary" size="large">
+            <IconButton
+              id="header-navbar-navlinks-home"
+              href="/#home"
+              color="primary"
+              size="large"
+            >
               <LogoIcon />
             </IconButton>
             <IconButton
