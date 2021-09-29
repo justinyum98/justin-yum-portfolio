@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
 import Link from './Link';
+import SkillsSection from './SkillsSection';
 
 const AboutSection = () => {
   return (
@@ -86,6 +87,7 @@ const AboutSection = () => {
             </Typography>{' '}
             using Nextjs and AWS Amplify.
           </Typography>
+          <SkillsSection isItem={true} />
         </Grid>
         <Grid
           item
