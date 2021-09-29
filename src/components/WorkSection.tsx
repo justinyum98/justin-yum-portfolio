@@ -21,6 +21,7 @@ const WorkSection = () => {
 
   const a11yProps = (index: number) => ({
     id: `work-tab-${index}`,
+    role: 'tab',
     'aria-controls': `work-tabpanel-${index}`,
   });
 
