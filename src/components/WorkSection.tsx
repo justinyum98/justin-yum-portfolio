@@ -29,7 +29,7 @@ const WorkSection = () => {
       companyName: 'ASML',
       positionTitle: 'Operational Efficiency EE Intern & Co-op',
       startDate: 'June 2021',
-      endDate: 'December 2021',
+      endDate: 'Current',
       skills: ['Python', 'pandas', 'SQL'],
       points: [
         'Wrote automation script using Python that queries SQL database to identify laser machine service maintenance times',
@@ -135,7 +135,14 @@ const WorkSection = () => {
               >
                 {startDate} - {endDate}
               </Typography>
-              <Typography variant="body1" component="div" gutterBottom>
+              <Typography
+                variant="body1"
+                component="div"
+                gutterBottom
+                sx={{
+                  mb: 3,
+                }}
+              >
                 Skills used:{' '}
                 <Typography
                   variant="inherit"
