@@ -2,21 +2,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import SectionContainer from './SectionContainer';
+
 const IntroSection = () => {
   return (
-    <Box
-      id="home"
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        py: {
-          xs: 16,
-          md: 20,
-          xl: 24,
-          xxl: 36,
-        },
-      }}
-    >
+    <SectionContainer id="home">
       <Typography variant="h6" component="div" color="textSecondary">
         Hi, my name is
       </Typography>
@@ -68,7 +58,7 @@ const IntroSection = () => {
         </Typography>
         .
       </Typography>
-    </Box>
+    </SectionContainer>
   );
 };
 

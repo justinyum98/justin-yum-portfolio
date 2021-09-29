@@ -1,25 +1,15 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
 import Link from './Link';
 import SkillsSection from './SkillsSection';
+import SectionContainer from './SectionContainer';
 
 const AboutSection = () => {
   return (
-    <Box
-      id="about"
-      sx={{
-        py: {
-          xs: 16,
-          md: 20,
-          xl: 24,
-          xxl: 36,
-        },
-      }}
-    >
+    <SectionContainer id="about">
       <Typography
         variant="h5"
         component="div"
@@ -116,7 +106,7 @@ const AboutSection = () => {
           />
         </Grid>
       </Grid>
-    </Box>
+    </SectionContainer>
   );
 };
 
