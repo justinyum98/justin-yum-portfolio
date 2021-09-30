@@ -2,7 +2,6 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import { AmplifyS3Image } from '@aws-amplify/ui-react';
 
 import Link from './Link';
 import SkillsSection from './SkillsSection';
