@@ -15,12 +15,14 @@
     "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^1.2.18",
     "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.1",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.0",
     "@mui/material": "^5.0.0",
+    "aws-amplify": "^4.3.0",
     "clsx": "^1.1.1",
     "next": "11.1.0",
     "react": "17.0.2",
