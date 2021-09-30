@@ -23,29 +23,24 @@ const theme = createTheme({
     },
   },
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
       main: '#F3B13E',
-      light: '#F3B13E',
-      dark: '#F3B13E',
       contrastText: '#1D0203',
     },
     secondary: {
-      main: '#8C3D16',
-      light: '#8C3D16',
-      dark: '#8C3D16',
-      contrastText: '#1D0203',
+      main: '#8c3d16',
+      contrastText: '#ffffff',
     },
     text: {
       primary: '#F3B13E',
       secondary: '#8C3D16',
     },
     background: {
-      paper: '#1D0203',
+      paper: '#261011',
       default: '#1D0203',
     },
   },
-  typography: {},
 });
 
 export default theme;
