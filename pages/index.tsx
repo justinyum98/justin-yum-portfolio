@@ -6,6 +6,7 @@ import HeaderNavbar from '../src/components/HeaderNavbar';
 import IntroSection from '../src/components/IntroSection';
 import AboutSection from '../src/components/AboutSection';
 import WorkSection from '../src/components/WorkSection';
+import ProjectsSection from '../src/components/ProjectsSection';
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <IntroSection />
         <AboutSection />
         <WorkSection />
+        <ProjectsSection />
       </Container>
     </Box>
   );
