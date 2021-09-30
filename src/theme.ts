@@ -23,31 +23,29 @@ const theme = createTheme({
     },
   },
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
-      main: '#ef473a',
-      light: '#ef473a',
-      dark: '#ef473a',
-      contrastText: '#30122d',
+      main: '#F3B13E',
+      light: '#F3B13E',
+      dark: '#F3B13E',
+      contrastText: '#1D0203',
     },
     secondary: {
-      main: '#870734',
-      light: '#870734',
-      dark: '#870734',
-      contrastText: '#30122d',
+      main: '#8C3D16',
+      light: '#8C3D16',
+      dark: '#8C3D16',
+      contrastText: '#1D0203',
     },
     text: {
-      primary: '#30122d',
-      secondary: '#ef473a',
+      primary: '#F3B13E',
+      secondary: '#8C3D16',
     },
     background: {
-      paper: '#ffd6bf',
-      default: '#ffd6bf',
+      paper: '#1D0203',
+      default: '#1D0203',
     },
   },
-  typography: {
-    
-  }
+  typography: {},
 });
 
 export default theme;

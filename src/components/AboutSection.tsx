@@ -2,6 +2,7 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
+import { AmplifyS3Image } from '@aws-amplify/ui-react';
 
 import Link from './Link';
 import SkillsSection from './SkillsSection';
@@ -90,7 +91,7 @@ const AboutSection = () => {
         >
           <Avatar
             alt="Justin Yum"
-            src="/profile-photo.png"
+            src="https://justinyumportfolio676d92023bae4f5c8237d7be84fba113139-dev.s3.us-west-1.amazonaws.com/public/profile-photo.png"
             variant="rounded"
             sx={{
               boxShadow: 2,

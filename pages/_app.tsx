@@ -4,10 +4,14 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
+import { Amplify } from 'aws-amplify';
 import createEmotionCache from '../src/createEmotionCache';
 import theme from '../src/theme';
+import awsExports from '../src/aws-exports';
 
 const clientSideEmotionCache = createEmotionCache();
+
+Amplify.configure({ ...awsExports, ssr: true });
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;

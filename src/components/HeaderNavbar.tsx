@@ -18,7 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 import Link from './Link';
-import LogoIcon from '../icons/LogoIcon';
+import CampfireIcon from '../icons/CampfireIcon';
 
 const HeaderNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -109,7 +109,7 @@ const HeaderNavbar = () => {
               color="primary"
               size="large"
             >
-              <LogoIcon />
+              <CampfireIcon />
             </IconButton>
             <IconButton
               id="header-navbar-open-sidebar-button"
