@@ -43,7 +43,7 @@ const AboutSection = () => {
             In the past, I&apos;ve been blessed to intern for{' '}
             <Link
               href="https://www.playstation.com/"
-              color="primary"
+              color="secondary"
               underline="hover"
             >
               a well-established video game company
@@ -51,7 +51,7 @@ const AboutSection = () => {
             and{' '}
             <Link
               href="https://www.dexcom.com/"
-              color="primary"
+              color="secondary"
               underline="hover"
             >
               a leading company in CGM development
@@ -60,7 +60,7 @@ const AboutSection = () => {
             lead the development of{' '}
             <Link
               href="https://www.parktaxiapp.com/"
-              color="primary"
+              color="secondary"
               underline="hover"
             >
               a mobile ride-share application
