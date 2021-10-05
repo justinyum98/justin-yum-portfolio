@@ -52,7 +52,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
 
   return (
-    <Card>
+    <Card sx={{ p: 2 }}>
       <CardHeader title={name} subheader={`${startDate} - ${endDate}`} />
       {typeof pictureUrl === 'string' ? (
         <CardMedia
@@ -123,13 +123,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           />
         </>
       )}
-      <CardContent component="p">
-        <Typography variant="subtitle1" gutterBottom>
+      <CardContent>
+        <Typography variant="subtitle1" gutterBottom sx={{ mb: 3 }}>
           {description}
         </Typography>
         <Typography variant="subtitle2">
           Tech stack:{' '}
-          <Typography variant="inherit" component="span" fontWeight="medium">
+          <Typography variant="inherit" component="span" fontWeight="bold">
             {technologies.join(', ')}
           </Typography>
         </Typography>
