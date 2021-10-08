@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 import SectionContainer from './SectionContainer';
 
@@ -58,6 +59,17 @@ const IntroSection = () => {
         </Typography>
         .
       </Typography>
+      <Button
+        href="https://justinyumportfolio676d92023bae4f5c8237d7be84fba113139-dev.s3.us-west-1.amazonaws.com/public/Justin+Yum+Resume.pdf"
+        variant="outlined"
+        size="large"
+        sx={{
+          mt: 4,
+          alignSelf: 'flex-start',
+        }}
+      >
+        See Resume
+      </Button>
     </SectionContainer>
   );
 };

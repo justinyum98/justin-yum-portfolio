@@ -7,6 +7,8 @@ import IntroSection from '../src/components/IntroSection';
 import AboutSection from '../src/components/AboutSection';
 import WorkSection from '../src/components/WorkSection';
 import ProjectsSection from '../src/components/ProjectsSection';
+import ContactSection from '../src/components/ContactSection';
+import Footer from '../src/components/Footer';
 
 const Index = () => {
   return (
@@ -28,6 +30,8 @@ const Index = () => {
         <AboutSection />
         <WorkSection />
         <ProjectsSection />
+        <ContactSection />
+        <Footer />
       </Container>
     </Box>
   );
