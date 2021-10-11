@@ -7,13 +7,12 @@ import SectionContainer from './SectionContainer';
 
 const ContactSection = () => {
   return (
-    <SectionContainer id="contact">
+    <SectionContainer id="contact" centerAlignItems>
       <Typography
         variant="h5"
         component="div"
         color="textSecondary"
         fontWeight="medium"
-        align="center"
         sx={{
           mb: 3,
         }}
@@ -23,7 +22,6 @@ const ContactSection = () => {
       <Typography
         variant="body1"
         component="div"
-        align="center"
         sx={{
           px: {
             xs: 0,
@@ -43,7 +41,6 @@ const ContactSection = () => {
         href="mailto:justinyum98@gmail.com"
         variant="contained"
         startIcon={<EmailIcon />}
-        sx={{ alignSelf: 'center' }}
       >
         Say Hi
       </Button>
