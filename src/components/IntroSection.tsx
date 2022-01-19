@@ -49,18 +49,14 @@ const IntroSection = () => {
       <Typography variant="subtitle1" paragraph fontWeight="medium">
         I develop (and sometimes design) both web and mobile experiences.
         <br />
-        Currently, I am a{' '}
+        Currently, I am a student at{' '}
         <Typography variant="inherit" component="span" color="textSecondary">
-          junior undergraduate student
-        </Typography>{' '}
-        working part-time at{' '}
-        <Typography variant="inherit" component="span" color="textSecondary">
-          ASML
+          California State University, San Marcos
         </Typography>
         .
       </Typography>
       <Button
-        href="https://justinyumportfolio676d92023bae4f5c8237d7be84fba113139-dev.s3.us-west-1.amazonaws.com/public/Justin+Yum+Resume.pdf"
+        href="https://justinyumportfolio676d92023bae4f5c8237d7be84fba113139-dev.s3.us-west-1.amazonaws.com/public/Justin's+Resume.pdf"
         variant="outlined"
         size="large"
         sx={{

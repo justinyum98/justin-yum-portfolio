@@ -33,8 +33,9 @@ const WorkSection = () => {
       endDate: 'Current',
       skills: ['Python', 'pandas', 'SQL'],
       points: [
-        'Wrote automation script using Python that queries SQL database to identify laser machine service maintenance times',
-        "Automated and standardized laser machine's maintenance efficiency analysis; decreased production time per year by 98% (312 manual labor hours to 4.3 machine hours)",
+        "Automated and standardized laser machine's maintenance efficiency analysis; boosted yearly production by 98% (312 manual labor hours per year to 4.3 machine hours per year)",
+        'Designed and developed analytics dashboard (using TIBCO Spotfire) that queries from a SQL database and visualizes maintenance logs; streamlined laser machine maintenance efficiency analysis for field service managers worldwide (previously only available for one site)',
+        "Initiated the creation of the team's first virtual machine; setup Windows Server environment that would run automation scripts on a schedule",
       ],
     },
     {
@@ -44,8 +45,7 @@ const WorkSection = () => {
       endDate: 'September 2018',
       skills: ['TypeScript', 'Angular'],
       points: [
-        "Developed User Account Management's internal OAuth client (using TypeScript) that uses CRUD operations to authenticate and authorize Dexcom's OAuth clients; Managed OAuth client tokens for over 100 company employees.",
-        "Reduced UAM's client load-time to less than a second, compared to a 4 second load-time from previous client.",
+        "Developed team's internal OAuth client (using Angular) that uses CRUD operations to authenticate and authorize team's OAuth clients; Managed OAuth client tokens for over 100 internal clients.",
       ],
     },
     {
@@ -55,8 +55,8 @@ const WorkSection = () => {
       endDate: 'September 2017',
       skills: ['Java'],
       points: [
-        "Reformatted and updated old API documentation (using Markdown) to improve readability and reflect new endpoint changes, reducing the Account's Service team implementation timeline by 2 hours.",
-        "Implemented parental control (using Java) that allowed parents to override children's set bedtime; Used by about 150,000 end-users daily.",
+        'Implemented new REST API endpoint (using Java) that is used by about 150,000 end-users daily',
+        "Reformatted and updated API documentation to improve readability and reflect new endpoint changes, reducing team's implementation timeline",
       ],
     },
   ];
